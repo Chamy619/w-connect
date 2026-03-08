@@ -172,6 +172,8 @@ body {
   transform: translateX(-50%);
   z-index: 1;
   opacity: 0.4;
+  animation: arrowBounce 2s ease-in-out infinite;
+  animation-delay: 2s;
 }
 
 /* ===== Section Common ===== */
@@ -573,6 +575,11 @@ body {
   transition: var(--transition);
 }
 
+.price-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
 .price-card:first-child {
   border-color: var(--green-mid);
   background: var(--green-pale);
@@ -742,7 +749,7 @@ body {
 }
 
 .faq-item p {
-  padding: 0 20px 16px;
+  padding: 0 20px;
   font-size: 0.85rem;
   color: var(--text-light);
   line-height: 1.7;
@@ -767,6 +774,7 @@ body {
   letter-spacing: 0.5px;
   box-shadow: 0 4px 20px rgba(44, 62, 45, 0.35);
   transition: var(--transition);
+  animation: ctaPulse 3s ease-in-out infinite;
 }
 
 .fixed-cta.hidden {
@@ -779,6 +787,77 @@ body {
   background: var(--green);
   transform: translateX(-50%) translateY(-2px);
   box-shadow: 0 6px 28px rgba(44, 62, 45, 0.45);
+}
+
+/* ===== Hero Entrance Animation ===== */
+.hero-content > * {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroFadeIn 0.8s ease forwards;
+}
+
+.hero-content > *:nth-child(1) { animation-delay: 0.2s; }
+.hero-content > *:nth-child(2) { animation-delay: 0.5s; }
+.hero-content > *:nth-child(3) { animation-delay: 0.8s; }
+.hero-content > *:nth-child(4) { animation-delay: 1.1s; }
+
+@keyframes heroFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Hero Arrow Bounce ===== */
+@keyframes arrowBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
+
+/* ===== Schedule Tab Fade ===== */
+.schedule-day {
+  animation: tabFadeIn 0.35s ease;
+}
+
+@keyframes tabFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== FAQ Smooth Animation ===== */
+.faq-item p {
+  overflow: hidden;
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  opacity: 0;
+  transition: max-height 0.35s ease, padding 0.35s ease, opacity 0.25s ease;
+}
+
+.faq-item[open] p {
+  max-height: 200px;
+  padding-bottom: 16px;
+  opacity: 1;
+}
+
+.faq-item summary::after {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+/* ===== CTA Pulse ===== */
+@keyframes ctaPulse {
+  0%, 100% { box-shadow: 0 4px 20px rgba(44, 62, 45, 0.35); }
+  50% { box-shadow: 0 4px 30px rgba(44, 62, 45, 0.55), 0 0 12px rgba(90, 125, 59, 0.3); }
 }
 
 /* ===== Animations ===== */
