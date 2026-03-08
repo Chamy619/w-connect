@@ -347,21 +347,39 @@ body {
   letter-spacing: 0.3px;
 }
 
-@media (max-width: 768px) {
-  .speaker-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px 16px;
-  }
+.speaker-swipe-hint {
+  display: none;
 }
 
-@media (max-width: 380px) {
-  .speaker-grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 768px) {
+  .speaker-swipe-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 16px;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 300;
   }
 
-  .speaker-photo {
-    width: 68px;
-    height: 68px;
+  .speaker-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 0 20px 12px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .speaker-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .speaker-card {
+    flex-shrink: 0;
+    scroll-snap-align: center;
   }
 }
 
