@@ -31,3 +31,34 @@ const fadeObserver = new IntersectionObserver(
 );
 
 fadeElements.forEach(el => fadeObserver.observe(el));
+
+// ===== FAQ Accordion =====
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+  item.addEventListener('toggle', () => {
+    if (item.open) {
+      faqItems.forEach(other => {
+        if (other !== item) other.open = false;
+      });
+    }
+  });
+});
+
+// ===== Hide fixed CTA at footer =====
+const fixedCta = document.querySelector('.fixed-cta');
+const hero = document.querySelector('.hero');
+const footer = document.querySelector('.footer');
+
+if (fixedCta) {
+  const ctaObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        fixedCta.classList.toggle('hidden', entry.isIntersecting);
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  if (footer) ctaObserver.observe(footer);
+}
