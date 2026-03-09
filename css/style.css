@@ -339,6 +339,12 @@ body {
   color: var(--text);
 }
 
+.speaker-desc {
+  font-size: 0.72rem;
+  font-weight: 300;
+  color: var(--text-light);
+}
+
 /* Coming soon state */
 .speaker-card.coming-soon .speaker-name {
   font-family: 'DM Serif Display', Georgia, serif;
