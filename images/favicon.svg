@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- 포도송이 -->
+  <circle cx="24" cy="20" r="8" fill="#6b2fa0"/>
+  <circle cx="40" cy="20" r="8" fill="#6b2fa0"/>
+  <circle cx="32" cy="18" r="8" fill="#7b3fb0"/>
+  <circle cx="18" cy="32" r="8" fill="#6b2fa0"/>
+  <circle cx="32" cy="32" r="8" fill="#7b3fb0"/>
+  <circle cx="46" cy="32" r="8" fill="#6b2fa0"/>
+  <circle cx="24" cy="44" r="8" fill="#6b2fa0"/>
+  <circle cx="40" cy="44" r="8" fill="#6b2fa0"/>
+  <circle cx="32" cy="52" r="7" fill="#7b3fb0"/>
+  <!-- 줄기 -->
+  <path d="M32 10 Q32 4 36 2" stroke="#4a7c59" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- 잎 -->
+  <path d="M36 2 Q42 4 40 10 Q36 6 36 2Z" fill="#4a7c59"/>
+</svg>
