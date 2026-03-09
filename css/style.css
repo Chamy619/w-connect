@@ -288,9 +288,9 @@ body {
 
 .speaker-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
-  max-width: 720px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -388,6 +388,7 @@ body {
   .speaker-card {
     flex-shrink: 0;
     scroll-snap-align: center;
+    width: 140px;
   }
 }
 
