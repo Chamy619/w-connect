@@ -667,6 +667,44 @@ body {
   font-size: 1.1rem;
 }
 
+.refund-notice {
+  margin-top: 20px;
+  padding: 20px;
+  background: var(--cream);
+  border-radius: calc(var(--radius) - 4px);
+  border-left: 3px solid var(--purple);
+}
+
+.refund-notice h4 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--purple);
+  margin-bottom: 12px;
+}
+
+.refund-notice ul {
+  list-style: none;
+}
+
+.refund-notice li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 8px;
+  font-size: 0.83rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.refund-notice li::before {
+  content: '·';
+  position: absolute;
+  left: 2px;
+  color: var(--purple);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
 /* ===== Footer ===== */
 .footer {
   background: var(--green-dark);
