@@ -460,7 +460,8 @@ body {
 
   .speaker-prev,
   .speaker-next {
-    display: none;
+    font-size: 1.8rem;
+    padding: 4px;
   }
 }
 
