@@ -78,6 +78,61 @@ faqItems.forEach(item => {
   });
 });
 
+// ===== Speaker Slider =====
+const speakerSlider = document.querySelector('.speaker-slider');
+if (speakerSlider) {
+  const track = speakerSlider.querySelector('.speaker-track');
+  const slides = speakerSlider.querySelectorAll('.speaker-slide');
+  const prevBtn = speakerSlider.querySelector('.speaker-prev');
+  const nextBtn = speakerSlider.querySelector('.speaker-next');
+  const dots = speakerSlider.querySelectorAll('.speaker-dot');
+  let currentSlide = 0;
+  const totalSlides = slides.length;
+
+  function goToSlide(index) {
+    if (index < 0 || index >= totalSlides) return;
+    currentSlide = index;
+    track.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+    dots.forEach((dot, i) => dot.classList.toggle('active', i === currentSlide));
+    prevBtn.classList.toggle('disabled', currentSlide === 0);
+    nextBtn.classList.toggle('disabled', currentSlide === totalSlides - 1);
+  }
+
+  prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
+  nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
+  dots.forEach((dot, i) => dot.addEventListener('click', () => goToSlide(i)));
+
+  // Touch swipe (with scroll-snap conflict prevention)
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let swiping = false;
+  track.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+    swiping = false;
+  }, { passive: true });
+  track.addEventListener('touchmove', (e) => {
+    const dx = Math.abs(e.touches[0].clientX - touchStartX);
+    const dy = Math.abs(e.touches[0].clientY - touchStartY);
+    if (!swiping && dx > 10 && dx > dy) {
+      swiping = true;
+    }
+    if (swiping) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+  track.addEventListener('touchend', (e) => {
+    if (!swiping) return;
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) {
+      goToSlide(currentSlide + (diff > 0 ? 1 : -1));
+    }
+  });
+
+  // Init
+  goToSlide(0);
+}
+
 // ===== Hide fixed CTA at footer =====
 const fixedCta = document.querySelector('.fixed-cta');
 const hero = document.querySelector('.hero');
