@@ -1036,7 +1036,7 @@ body {
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   html {
-    scroll-snap-type: y proximity;
+    scroll-snap-type: none;
   }
 
   .hero-deco img {
@@ -1050,7 +1050,7 @@ body {
 
   .section {
     padding: 60px 20px;
-    min-height: 100dvh;
+    min-height: auto;
   }
 
   .about-details {
