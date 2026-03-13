@@ -133,42 +133,6 @@ if (speakerSlider) {
   goToSlide(0);
 }
 
-// ===== Grape Emoji Particle Effect =====
-document.addEventListener('click', (e) => {
-  const count = Math.floor(Math.random() * 3) + 3; // 3~5 particles
-  for (let i = 0; i < count; i++) {
-    const particle = document.createElement('span');
-    particle.textContent = '\uD83C\uDF47';
-    const size = 16 + Math.random() * 8; // 16~24px
-    const angle = Math.random() * Math.PI * 2;
-    const distance = 40 + Math.random() * 40; // 40~80px
-    const tx = Math.cos(angle) * distance;
-    const ty = -Math.abs(Math.sin(angle) * distance); // always upward bias
-
-    Object.assign(particle.style, {
-      position: 'fixed',
-      left: e.clientX + 'px',
-      top: e.clientY + 'px',
-      fontSize: size + 'px',
-      pointerEvents: 'none',
-      zIndex: '9999',
-      opacity: '1',
-      transform: 'translate(-50%, -50%)',
-      transition: 'transform 0.8s ease-out, opacity 0.8s ease-out',
-      willChange: 'transform, opacity',
-    });
-
-    document.body.appendChild(particle);
-
-    requestAnimationFrame(() => {
-      particle.style.transform = 'translate(calc(-50% + ' + tx + 'px), calc(-50% + ' + ty + 'px))';
-      particle.style.opacity = '0';
-    });
-
-    particle.addEventListener('transitionend', () => particle.remove(), { once: true });
-  }
-});
-
 // ===== Hide fixed CTA at footer =====
 const fixedCta = document.querySelector('.fixed-cta');
 const hero = document.querySelector('.hero');
