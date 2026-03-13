@@ -137,7 +137,7 @@ body {
 .hero-verse p {
   font-size: 0.85rem;
   line-height: 1.8;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.3px;
   color: var(--text-light);
 }
@@ -1037,6 +1037,11 @@ body {
 @media (max-width: 768px) {
   html {
     scroll-snap-type: y proximity;
+  }
+
+  .hero-deco img {
+    filter: blur(1px);
+    transform: scale(1.02);
   }
 
   .hero-title {
