@@ -218,9 +218,9 @@ body {
 }
 
 .section-title {
-  font-family: 'DM Serif Display', Georgia, serif;
+  font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1.8rem;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--green-dark);
   letter-spacing: -0.5px;
 }
