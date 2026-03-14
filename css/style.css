@@ -108,7 +108,7 @@ body {
   position: relative;
   z-index: 1;
   color: var(--green-dark);
-  padding: 40px 20px 80px;
+  padding: 40px 20px 40px;
   max-width: 640px;
 }
 
@@ -128,12 +128,12 @@ body {
   letter-spacing: -2px;
   line-height: 0.5;
   margin-top: 45px;
-  margin-bottom: 12px;
+  margin-bottom: 40px;
   color: var(--green-dark);
 }
 
 .hero-verse {
-  margin-bottom: 36px;
+  margin-bottom: 60px;
 }
 
 .hero-verse p {
