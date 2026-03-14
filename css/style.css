@@ -852,6 +852,13 @@ body {
   font-size: 1.1rem;
 }
 
+.register-contact {
+  margin-top: 16px;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-weight: 400;
+}
+
 /* ===== Merch ===== */
 .merch {
   background: var(--white);
