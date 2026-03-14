@@ -640,6 +640,25 @@ body {
   font-weight: 300;
 }
 
+.location-detail ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.location-detail ul li {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 300;
+  padding: 2px 0;
+}
+
+.location-detail ul li::before {
+  content: "•";
+  margin-right: 6px;
+  color: var(--primary);
+}
+
 .location-map {
   border-radius: var(--radius);
   overflow: hidden;
