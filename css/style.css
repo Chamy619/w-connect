@@ -52,6 +52,7 @@ body {
   line-height: 1.7;
   background: var(--cream);
   overflow-x: hidden;
+  word-break: keep-all;
 }
 
 .container {
@@ -665,6 +666,11 @@ body {
   border-collapse: collapse;
   font-size: 0.78rem;
   color: var(--text-muted);
+}
+
+.faq-item .shuttle-timetable {
+  width: auto;
+  margin: 8px auto 12px;
 }
 
 .shuttle-timetable th {
