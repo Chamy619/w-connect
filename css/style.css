@@ -605,59 +605,73 @@ body {
   background: var(--white);
 }
 
-.location-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  align-items: start;
+.location-info {
+  text-align: center;
+  margin-bottom: 32px;
 }
 
 .location-info h3 {
-  font-family: 'DM Serif Display', Georgia, serif;
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: var(--green-dark);
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text);
   margin-bottom: 8px;
 }
 
 .location-address {
   font-size: 0.88rem;
   color: var(--text-muted);
-  margin-bottom: 16px;
   font-weight: 300;
 }
 
-.location-detail strong {
-  display: block;
-  font-size: 0.88rem;
-  color: var(--text);
-  font-weight: 500;
-  margin-bottom: 4px;
+.transport-cards {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.location-detail p {
+.transport-card {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+}
+
+.transport-icon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.transport-card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--green-dark);
+  margin-bottom: 10px;
+}
+
+.transport-card p {
   font-size: 0.82rem;
   color: var(--text-muted);
   font-weight: 300;
+  line-height: 1.7;
 }
 
-.location-detail ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.location-contact {
+  margin-top: 24px;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-weight: 400;
+  text-align: center;
 }
 
-.location-detail ul li {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  font-weight: 300;
-  padding: 2px 0;
-}
-
-.location-detail ul li::before {
-  content: "•";
-  margin-right: 6px;
-  color: var(--primary);
+.transport-divider {
+  width: 1px;
+  background: var(--text-muted);
+  opacity: 0.3;
+  align-self: stretch;
+  margin: 20px 0;
 }
 
 .shuttle-timetable {
@@ -1133,8 +1147,15 @@ body {
     font-size: 0.72rem;
   }
 
-  .location-content {
-    grid-template-columns: 1fr;
+  .transport-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .transport-divider {
+    width: 100%;
+    height: 1px;
+    margin: 4px 0;
   }
 
   .price-cards {
