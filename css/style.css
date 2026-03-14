@@ -854,7 +854,7 @@ body {
 
 /* ===== Merch ===== */
 .merch {
-  background: var(--cream);
+  background: var(--white);
 }
 
 .merch-content {
@@ -928,7 +928,7 @@ body {
 
 /* ===== FAQ ===== */
 .faq {
-  background: var(--white);
+  background: var(--cream);
 }
 
 .faq-list {
@@ -941,7 +941,7 @@ body {
 }
 
 .faq-item {
-  background: var(--cream);
+  background: var(--white);
   border: 1px solid var(--cream-dark);
   border-radius: var(--radius-sm);
   overflow: hidden;
