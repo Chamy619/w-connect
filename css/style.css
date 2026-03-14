@@ -122,7 +122,7 @@ body {
 
 .hero-title {
   font-family: 'MamaBlock', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: clamp(3.2rem, 12vw, 6.5rem);
+  font-size: clamp(3.8rem, 14vw, 7.5rem);
   font-weight: normal;
   letter-spacing: -2px;
   line-height: 1.05;
@@ -1093,7 +1093,7 @@ body {
   }
 
   .hero-title {
-    font-size: clamp(2.5rem, 14vw, 4.5rem);
+    font-size: clamp(3rem, 16vw, 5.5rem);
     letter-spacing: -2px;
   }
 
