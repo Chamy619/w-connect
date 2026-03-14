@@ -123,11 +123,12 @@ body {
 
 .hero-title {
   font-family: 'MamaBlock', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: clamp(3.8rem, 14vw, 7.5rem);
+  font-size: clamp(4.5rem, 18vw, 9rem);
   font-weight: normal;
   letter-spacing: -2px;
-  line-height: 1.05;
-  margin-bottom: 8px;
+  line-height: 0.5;
+  margin-top: 45px;
+  margin-bottom: 12px;
   color: var(--green-dark);
 }
 
@@ -1120,8 +1121,9 @@ body {
   }
 
   .hero-title {
-    font-size: clamp(3rem, 16vw, 5.5rem);
+    font-size: clamp(3.5rem, 20vw, 6.5rem);
     letter-spacing: -2px;
+    margin-top: 30px;
   }
 
   .section {
@@ -1147,9 +1149,21 @@ body {
     font-size: 0.72rem;
   }
 
+  .location-info {
+    margin-bottom: -8px;
+  }
+
+  .location-contact {
+    margin-top: 12px;
+  }
+
   .transport-cards {
     flex-direction: column;
     align-items: center;
+  }
+
+  .transport-card {
+    padding: 10px 20px;
   }
 
   .transport-divider {
