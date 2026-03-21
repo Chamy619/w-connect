@@ -821,6 +821,13 @@ body {
   font-size: 1.1rem;
 }
 
+.account-inline {
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
 .refund-notice {
   margin-top: 20px;
   padding: 20px;
