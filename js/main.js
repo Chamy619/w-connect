@@ -139,14 +139,20 @@ const hero = document.querySelector('.hero');
 const footer = document.querySelector('.footer');
 
 if (fixedCta) {
+  const ctaHideSections = new Set();
   const ctaObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach(entry => {
-        fixedCta.classList.toggle('hidden', entry.isIntersecting);
+        if (entry.isIntersecting) {
+          ctaHideSections.add(entry.target);
+        } else {
+          ctaHideSections.delete(entry.target);
+        }
       });
+      fixedCta.classList.toggle('hidden', ctaHideSections.size > 0);
     },
     { threshold: 0.1 }
   );
 
-  if (footer) ctaObserver.observe(footer);
+  document.querySelectorAll('.merch, .faq, .footer').forEach(el => ctaObserver.observe(el));
 }
