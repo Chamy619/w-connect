@@ -869,11 +869,50 @@ body {
   font-size: 1.1rem;
 }
 
-.register-contact {
-  margin-top: 16px;
-  font-size: 0.85rem;
-  color: var(--text-light);
+.register-contact-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: var(--green-pale);
+  border: 1.5px solid var(--green-mid);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  padding-top: 22px;
+  margin-bottom: 20px;
+}
+
+.register-contact-badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--green-dark);
+  color: var(--white);
+  font-size: 0.68rem;
+  font-weight: 500;
+  padding: 2px 12px;
+  border-radius: 10px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.register-contact-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.register-contact-phone {
+  font-size: 0.9rem;
+  color: var(--green-dark);
+  text-decoration: none;
   font-weight: 400;
+}
+
+.register-contact-phone:hover {
+  text-decoration: underline;
 }
 
 /* ===== Merch ===== */
